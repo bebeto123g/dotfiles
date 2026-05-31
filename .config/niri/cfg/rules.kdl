@@ -18,8 +18,11 @@
 
     window-rule {
 	match app-id="firefox"
+	match app-id="code-oss"
+	match app-id="mpv"
 	// match app-id="Alacritty"
 	match app-id="brave-browser"
+	match app-id="org.gnome.Showtime"
 	open-maximized true
     }
 
