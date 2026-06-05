@@ -15,4 +15,8 @@ layout {
         width 4
         active-gradient from="#eba54d" to="#80ab24" angle=135
     }
+
+    shadow {
+        off
+    }
 }
