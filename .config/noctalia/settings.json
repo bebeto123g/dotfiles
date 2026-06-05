@@ -18,21 +18,6 @@
         "ignoreMouseInput": false,
         "overviewLayer": false,
         "pinnedApps": [
-            "hiddify",
-            "yazi",
-            "brave-browser",
-            "firefox",
-            "Alacritty",
-            "btop",
-            "org.gajim.Gajim",
-            "org.telegram.desktop",
-            "vlc",
-            "com.shellyorg.shelly",
-            "steam",
-            "org.gnome.Nautilus",
-            "code-oss",
-            "zellij",
-            "org.manjaro.pamac.manager"
         ],
         "position": "center",
         "screenshotAnnotationTool": "",
@@ -40,7 +25,7 @@
         "showIconBackground": false,
         "sortByMostUsed": true,
         "terminalCommand": "alacritty -e",
-        "viewMode": "grid"
+        "viewMode": "list"
     },
     "audio": {
         "mprisBlacklist": [
@@ -96,9 +81,9 @@
                 {
                     "characterCount": 2,
                     "colorizeIcons": false,
-                    "emptyColor": "primary",
+                    "emptyColor": "secondary",
                     "enableScrollWheel": true,
-                    "focusedColor": "none",
+                    "focusedColor": "primary",
                     "followFocusedScreen": false,
                     "fontWeight": "bold",
                     "groupedBorderOpacity": 1,
@@ -106,12 +91,12 @@
                     "iconScale": 0.8,
                     "id": "Workspace",
                     "labelMode": "index",
-                    "occupiedColor": "primary",
-                    "pillSize": 0.7000000000000001,
+                    "occupiedColor": "secondary",
+                    "pillSize": 0.6,
                     "showApplications": false,
-                    "showApplicationsHover": true,
+                    "showApplicationsHover": false,
                     "showBadge": true,
-                    "showLabelsOnlyWhenOccupied": false,
+                    "showLabelsOnlyWhenOccupied": true,
                     "unfocusedIconsOpacity": 1
                 }
             ],
@@ -121,14 +106,23 @@
                     "colorizeSystemText": "none",
                     "customIconPath": "",
                     "enableColorization": false,
-                    "icon": "rocket",
+                    "icon": "grid-dots",
                     "iconColor": "none",
                     "id": "Launcher",
                     "useDistroLogo": false
                 },
                 {
+                    "clockColor": "none",
+                    "customFont": "",
+                    "formatHorizontal": "HH:mm ddd, MMM dd",
+                    "formatVertical": "HH mm - dd MM",
+                    "id": "Clock",
+                    "tooltipFormat": "HH:mm ddd, MMM dd",
+                    "useCustomFont": false
+                },
+                {
                     "compactMode": false,
-                    "diskPath": "/",
+                    "diskPath": "/home",
                     "iconColor": "none",
                     "id": "SystemMonitor",
                     "showCpuCores": false,
@@ -181,7 +175,7 @@
                     "blacklist": [
                     ],
                     "chevronColor": "none",
-                    "colorizeIcons": true,
+                    "colorizeIcons": false,
                     "drawerEnabled": false,
                     "hidePassive": false,
                     "id": "Tray",
@@ -189,74 +183,16 @@
                     ]
                 },
                 {
-                    "defaultSettings": {
-                        "autoHeight": true,
-                        "bindOverrides": {
-                        },
-                        "cheatsheetData": [
-                        ],
-                        "columnCount": 3,
-                        "descriptionTextColor": "#E0E0E0",
-                        "detectedCompositor": "",
-                        "hyprlandConfigPath": "~/.config/hypr/hyprland.conf",
-                        "hyprlandLuaConfigPath": "~/.config/hypr/hyprland.lua",
-                        "hyprlandParserMode": "auto",
-                        "keyColorAlt": "#FF6B6B",
-                        "keyColorCtrl": "",
-                        "keyColorDefault": "#6C757D",
-                        "keyColorMouse": "#F38181",
-                        "keyColorNumeric": "#A8DADC",
-                        "keyColorPrint": "#95E1D3",
-                        "keyColorShift": "",
-                        "keyColorSuper": "",
-                        "keyColorXF86": "#4ECDC4",
-                        "keyLabelColor": "#FFFFFF",
-                        "keyTextAlt": "",
-                        "keyTextCtrl": "",
-                        "keyTextDefault": "",
-                        "keyTextMouse": "",
-                        "keyTextNumeric": "",
-                        "keyTextPrint": "",
-                        "keyTextShift": "",
-                        "keyTextSuper": "",
-                        "keyTextXF86": "",
-                        "mangoConfigPath": "~/.config/mango/config.conf",
-                        "mergeSequentialBinds": true,
-                        "modKeyVariable": "$mod",
-                        "niriConfigPath": "~/.config/niri/config.kdl",
-                        "showUndescribedBinds": true,
-                        "splitLargeWorkspaceCategory": true,
-                        "windowHeight": 850,
-                        "windowWidth": 1400,
-                        "workspaceSplitThreshold": 12
-                    },
-                    "id": "plugin:keybind-cheatsheet"
-                },
-                {
                     "hideWhenZero": false,
                     "hideWhenZeroUnread": false,
                     "iconColor": "none",
                     "id": "NotificationHistory",
                     "showUnreadBadge": true,
-                    "unreadBadgeColor": "tertiary"
-                },
-                {
-                    "displayMode": "alwaysShow",
-                    "iconColor": "none",
-                    "id": "Volume",
-                    "middleClickCommand": "pwvucontrol || pavucontrol",
-                    "textColor": "none"
-                },
-                {
-                    "applyToAllMonitors": false,
-                    "displayMode": "alwaysShow",
-                    "iconColor": "none",
-                    "id": "Brightness",
-                    "textColor": "none"
+                    "unreadBadgeColor": "primary"
                 },
                 {
                     "deviceNativePath": "__default__",
-                    "displayMode": "icon-always",
+                    "displayMode": "graphic-clean",
                     "hideIfIdle": false,
                     "hideIfNotDetected": true,
                     "id": "Battery",
@@ -264,28 +200,26 @@
                     "showPowerProfiles": false
                 },
                 {
-                    "displayMode": "forceOpen",
+                    "displayMode": "onhover",
                     "iconColor": "none",
-                    "id": "KeyboardLayout",
-                    "showIcon": false,
+                    "id": "Volume",
+                    "middleClickCommand": "pwvucontrol || pavucontrol",
                     "textColor": "none"
                 },
                 {
-                    "clockColor": "none",
-                    "customFont": "",
-                    "formatHorizontal": "HH:mm ddd, MMM dd",
-                    "formatVertical": "HH mm - dd MM",
-                    "id": "Clock",
-                    "tooltipFormat": "HH:mm ddd, MMM dd",
-                    "useCustomFont": false
+                    "applyToAllMonitors": false,
+                    "displayMode": "onhover",
+                    "iconColor": "none",
+                    "id": "Brightness",
+                    "textColor": "none"
                 },
                 {
                     "colorizeDistroLogo": false,
-                    "colorizeSystemIcon": "error",
+                    "colorizeSystemIcon": "none",
                     "colorizeSystemText": "none",
                     "customIconPath": "",
                     "enableColorization": false,
-                    "icon": "noctalia",
+                    "icon": "adjustments",
                     "id": "ControlCenter",
                     "useDistroLogo": false
                 }
@@ -321,7 +255,7 @@
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
-        "predefinedScheme": "Nord",
+        "predefinedScheme": "Ayu",
         "schedulingMode": "off",
         "syncGsettings": true,
         "useWallpaperColors": false
@@ -387,22 +321,17 @@
         }
     },
     "desktopWidgets": {
-        "enabled": true,
+        "enabled": false,
         "gridSnap": false,
         "gridSnapScale": false,
         "monitorWidgets": [
-            {
-                "name": "eDP-1",
-                "widgets": [
-                ]
-            }
         ],
         "overviewEnabled": true
     },
     "dock": {
         "animationSpeed": 1,
         "backgroundOpacity": 1,
-        "colorizeIcons": true,
+        "colorizeIcons": false,
         "deadOpacity": 0.6,
         "displayMode": "auto_hide",
         "dockType": "floating",
@@ -443,7 +372,7 @@
         "clockFormat": "hh\\nmm",
         "clockStyle": "custom",
         "compactLockScreen": false,
-        "dimmerOpacity": 0.17,
+        "dimmerOpacity": 0.2,
         "enableBlurBehind": true,
         "enableLockScreenCountdown": true,
         "enableLockScreenMediaControls": false,
@@ -495,7 +424,7 @@
         "showScreenCorners": false,
         "showSessionButtonsOnLockScreen": true,
         "smoothScrollEnabled": true,
-        "telemetryEnabled": true
+        "telemetryEnabled": false
     },
     "hooks": {
         "colorGeneration": "",
@@ -511,7 +440,7 @@
     },
     "idle": {
         "customCommands": "[]",
-        "enabled": true,
+        "enabled": false,
         "fadeDuration": 5,
         "lockCommand": "",
         "lockTimeout": 660,
@@ -529,7 +458,7 @@
         "firstDayOfWeek": -1,
         "hideWeatherCityName": false,
         "hideWeatherTimezone": false,
-        "name": "novgorod",
+        "name": "",
         "showCalendarEvents": true,
         "showCalendarWeather": true,
         "showWeekNumberInCalendar": false,
@@ -676,7 +605,7 @@
                 "keybind": ""
             }
         ],
-        "showHeader": true,
+        "showHeader": false,
         "showKeybinds": true
     },
     "settingsVersion": 59,
@@ -705,42 +634,14 @@
     },
     "templates": {
         "activeTemplates": [
-            {
-                "enabled": true,
-                "id": "alacritty"
-            },
-            {
-                "enabled": true,
-                "id": "gtk"
-            },
-            {
-                "enabled": true,
-                "id": "qt"
-            },
-            {
-                "enabled": true,
-                "id": "niri"
-            },
-            {
-                "enabled": true,
-                "id": "telegram"
-            },
-            {
-                "enabled": true,
-                "id": "scroll"
-            },
-            {
-                "enabled": true,
-                "id": "kcolorscheme"
-            }
         ],
         "enableUserTheming": false
     },
     "ui": {
         "boxBorderEnabled": false,
-        "fontDefault": "MesloLGL Nerd Font",
+        "fontDefault": "Adwaita Sans",
         "fontDefaultScale": 1,
-        "fontFixed": "MesloLGL Nerd Font Mono",
+        "fontFixed": "monospace",
         "fontFixedScale": 1,
         "panelBackgroundOpacity": 0.93,
         "panelsAttachedToBar": true,
@@ -772,7 +673,7 @@
         "showHiddenFiles": false,
         "skipStartupTransition": false,
         "solidColor": "#1a1a2e",
-        "sortOrder": "date_desc",
+        "sortOrder": "name",
         "transitionDuration": 1500,
         "transitionEdgeSmoothness": 0.05,
         "transitionType": [
@@ -786,7 +687,7 @@
         "useOriginalImages": false,
         "useSolidColor": false,
         "useWallhaven": false,
-        "viewMode": "browse",
+        "viewMode": "single",
         "wallhavenApiKey": "",
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",

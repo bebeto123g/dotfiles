@@ -1,5 +1,5 @@
     window-rule {
-        geometry-corner-radius 8 // Set every window radius to 20
+        geometry-corner-radius 12 // Set every window radius to 20
         clip-to-geometry true
     }
 
@@ -15,14 +15,13 @@
        default-floating-position x=10 y=10 relative-to="bottom-right"
        open-focused false
     }
-
+    
     window-rule {
 	match app-id="firefox"
 	match app-id="code-oss"
 	match app-id="mpv"
 	// match app-id="Alacritty"
 	match app-id="brave-browser"
-	match app-id="org.gnome.Showtime"
 	open-maximized true
     }
 

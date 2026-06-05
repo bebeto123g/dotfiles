@@ -20,7 +20,7 @@ input {
     touchpad {
         tap // Enable tap-to-click
         natural-scroll // Enable natural (macOS-style) scrolling
-	dwt
+        dwt
     }
 
     mouse {
