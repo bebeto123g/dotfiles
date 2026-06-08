@@ -9,7 +9,7 @@ binds {
     Mod+Shift+ESCAPE                     { show-hotkey-overlay; }
 
     // ─── Applications ───
-    Mod+Return                          hotkey-overlay-title="Open Terminal: Alacritty" { spawn "alacritty"; }
+    Mod+Return                          hotkey-overlay-title="Open Terminal: Kitty" { spawn "kitty"; }
     Mod+D	                        hotkey-overlay-title="Open App Launcher: noctalia launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
     Mod+N                               hotkey-overlay-title="Open Browser: firefox" { spawn "firefox"; }
     Mod+M                               hotkey-overlay-title="Open Telegram" { spawn "Telegram"; }
@@ -20,8 +20,8 @@ binds {
 
     // Please choose your own file manager.
     // Mod+E                               hotkey-overlay-title="File Manager: Nautilus" { spawn "nautilus"; }
-    Mod+E                               hotkey-overlay-title="File Manager: Yazi" { spawn "alacritty" "-e" "/usr/bin/yazi"; }
-    Mod+T                               hotkey-overlay-title="Terminal: Zellij" { spawn "alacritty" "-e" "/usr/bin/zellij"; }
+    Mod+E                               hotkey-overlay-title="File Manager: Yazi" { spawn "kitty" "-e" "/usr/bin/yazi"; }
+    Mod+T                               hotkey-overlay-title="Terminal: Zellij" { spawn "kitty" "-e" "/usr/bin/zellij"; }
 
     // ─── Media Controls ───
     XF86AudioRaiseVolume                allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
