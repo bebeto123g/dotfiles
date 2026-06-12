@@ -35,27 +35,27 @@
 },
 {
   "type": "os",
-  "key": "",
+  "key": " os      ",
   "keycolor": "red"
 },
 {
   "type": "kernel",
-  "key": "",
+  "key": " kernel  ",
   "keycolor": "red"
 },
 {
   "type": "de",
-  "key": "",
+  "key": " de      ",
   "keycolor": "green"
 },
 {
   "type": "wm",
-  "key": "",
+  "key": " wm      ",
   "keycolor": "green"
 },
 {
   "type": "packages",
-  "key": "",
+  "key": " packages",
   "keycolor": "yellow"
 },
 {
@@ -64,37 +64,37 @@
 },
 {
   "type": "memory",
-  "key": "",
+  "key": " memory  ",
   "keycolor": "blue"
 },
 {
   "type": "host",
-  "key": "",
+  "key": " host    ",
   "keycolor": "blue"
 },
 {
   "type": "cpu",
-  "key": "",
+  "key": " cpu     ",
   "keycolor": "blue"
 },
 {
   "type": "gpu",
-  "key": "",
+  "key": " gpu     ",
   "keycolor": "magenta"
 },
 {
   "type": "swap",
-  "key": "",
+  "key": " swap    ",
   "keycolor": "magenta"
 },
 {
   "type": "disk",
-  "key": "",
+  "key": " disk    ",
   "keycolor": "red"
 },
 {
   "type": "battery",
-  "key": "",
+  "key": " battery ",
   "keycolor": "red"
 },
 {
@@ -103,17 +103,17 @@
 },
 {
   "type": "uptime",
-  "key": "",
+  "key": " uptime  ",
   "keycolor": "yellow"
 },
 {
   "type": "terminal",
-  "key": "",
+  "key": " terminal",
   "keycolor": "yellow"
 },
 {
   "type": "locale",
-  "key": "",
+  "key": " locale  ",
   "keycolor": "yellow"
 },
 {
