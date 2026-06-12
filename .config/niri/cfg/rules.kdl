@@ -18,10 +18,14 @@ window-rule {
 
 window-rule {
     match app-id="firefox"
+    match app-id="obsidian"
     match app-id="code-oss"
     match app-id="mpv"
     // match app-id="Alacritty"
     match app-id="brave-browser"
+    // match app-id="^kitty$" title=r#"^[Yy]azi\d+$"#
+    match app-id=r#"^kitty$"# title=r#"^Yazi: bebeto$"#
+    // match app-id="kitty" title=r#"^Yazi$"#
     open-maximized true
 }
 
