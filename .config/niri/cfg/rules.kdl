@@ -18,6 +18,7 @@ window-rule {
 
 window-rule {
     match app-id="firefox"
+    match app-id="zen"
     match app-id="obsidian"
     match app-id="code-oss"
     match app-id="mpv"
