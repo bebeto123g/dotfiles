@@ -10,12 +10,14 @@ binds {
 
     // ─── Applications ───
     Mod+Return                          hotkey-overlay-title="Open Terminal: Kitty" { spawn "kitty"; }
+    Mod+Shift+Return                    hotkey-overlay-title="Open Terminal: Alacritty" { spawn "alacritty"; }
     Mod+D	                        hotkey-overlay-title="Open App Launcher: noctalia launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
     Mod+N                               hotkey-overlay-title="Open Browser: firefox" { spawn "firefox"; }
     Mod+M                               hotkey-overlay-title="Open Telegram" { spawn "Telegram"; }
     Mod+B                               hotkey-overlay-title="Open Browser: Helium" { spawn "helium-browser"; }
     Mod+Z                               hotkey-overlay-title="Open Browser: Zen" { spawn "zen-browser"; }
     Mod+V                               hotkey-overlay-title="Open VSCode" { spawn "code-oss"; }
+    Mod+X                               hotkey-overlay-title="Open Nautilus" { spawn "nautilus"; }
     Mod+ALT+L                           hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
     Mod+Shift+Q                         hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
     Mod+R { switch-preset-column-width; }
