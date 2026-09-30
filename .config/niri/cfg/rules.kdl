@@ -24,6 +24,7 @@ window-rule {
     match app-id="mpv"
     match app-id="helium"
     match app-id="kitty"
+    match app-id="VirtualBox Machine"
     // match app-id="^kitty$" title="^Yazi: bebeto$"
     open-maximized true
 }
