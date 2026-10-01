@@ -10470,12 +10470,12 @@ if [[ $EUID -ne 0 ]] && \
 	[[ $_SKIP_SYSTEM_INFO = false ]]; then
 
 	# Link: https://github.com/LinusDierheimer/fastfetch
-	if hascommand --strict fastfetch; then
-		fastfetch
+	# if hascommand --strict fastfetch; then
+	#	fastfetch
 
 	# Actively maintained fork of neofetch (drop-in compatible)
 	# Link: https://github.com/hykilpikonna/hyfetch
-	elif hascommand --strict hyfetch; then
+	if hascommand --strict hyfetch; then
 		hyfetch
 
 	# Link: https://ostechnix.com/neofetch-display-linux-systems-information/
