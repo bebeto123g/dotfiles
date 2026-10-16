@@ -11,3 +11,11 @@ source /usr/share/cachyos-zsh-config/cachyos-config.zsh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export EDITOR=vim
+
+# Replace ls with eza
+alias ls='eza -al --color=always --group-directories-first --icons=always' # preferred listing
+alias la='eza -a --color=always --group-directories-first --icons=always'  # all files and dirs
+alias ll='eza -l --color=always --group-directories-first --icons=always'  # long format
+alias lt='eza -aT --color=always --group-directories-first --icons=always' # tree listing
+alias l.="eza -a | grep -e '^\.'"                                     # show only dotfiles
+

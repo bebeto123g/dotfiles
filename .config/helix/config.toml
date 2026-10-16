@@ -1,0 +1,79 @@
+theme = "catppuccin_mocha"
+
+[editor]
+line-number = "relative"
+mouse = true
+cursorline = true
+color-modes = true
+true-color = true
+completion-trigger-len = 1
+auto-format = true
+rulers = [110]
+cursorcolumn = true
+bufferline = "always"
+
+[editor.auto-save]
+focus-lost = true
+after-delay = { enable = true, timeout = 10000 }
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.indent-guides]
+render = true
+skip-levels = 1
+character = "⸽" # Some characters that work well: "▏", "┆", "┊", "⸽"
+
+[editor.file-picker]
+hidden = false
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true
+display-signature-help-docs = true
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+
+# https://docs.helix-editor.com/master/configuration.html#editorsoft-wrap-section
+[editor.soft-wrap]
+enable = true
+# wrap-at-text-width = true
+wrap-indicator = "↩ "
+
+### https://docs.helix-editor.com/master/configuration.html#editorwhitespace-section
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+newline = "none"
+
+[editor.whitespace.characters]
+space = " "
+nbsp = "⍽"    # Non Breaking SPace
+tab = "→"
+newline = "⏎"
+tabpad = "·"  # Tabs will look like "→···" (depending on tab width)
+
+[editor.statusline]
+left = [ "mode", "spinner", "diagnostics" ]
+center = [ "file-name", "separator", "version-control", "separator" ]
+right = [ "position", "position-percentage", "total-line-numbers" ]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[keys.normal]
+C-s = ":write"
+C-q = ":quit"
+C-r = ":reload"
+
+# Use system clipboard
+p = "paste_clipboard_before"
+y = "yank_main_selection_to_clipboard"
+
+# https://github.com/helix-editor/helix/discussions/7898
+space.c = "toggle_comments"
+

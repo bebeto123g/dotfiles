@@ -9,32 +9,40 @@ binds {
     Mod+Shift+ESCAPE                     { show-hotkey-overlay; }
 
     // ─── Applications ───
-    Mod+Return                          hotkey-overlay-title="Open Terminal: Alacritty" { spawn "alacritty"; }
-    Mod+D	                        hotkey-overlay-title="Open App Launcher: noctalia launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
+    Mod+Return                          hotkey-overlay-title="Open Terminal: Kitty" { spawn "kitty"; }
+    Mod+Shift+Return                    hotkey-overlay-title="Open Terminal: Alacritty" { spawn "alacritty"; }
     Mod+N                               hotkey-overlay-title="Open Browser: firefox" { spawn "firefox"; }
     Mod+M                               hotkey-overlay-title="Open Telegram" { spawn "Telegram"; }
-    Mod+B                               hotkey-overlay-title="Open Browser: Brave" { spawn "brave"; }
-    Mod+ALT+L                           hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
-    Mod+Shift+Q                         hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
+    Mod+B                               hotkey-overlay-title="Open Browser: Helium" { spawn "helium-browser"; }
+    Mod+Z                               hotkey-overlay-title="Open Browser: Zen" { spawn "zen-browser"; }
+    Mod+V                               hotkey-overlay-title="Open VSCode" { spawn "code-oss"; }
+    Mod+X                               hotkey-overlay-title="Open Nautilus" { spawn "nautilus"; }
+
+    Mod+D			        hotkey-overlay-title="Open App Launcher: Noctalia" { spawn-sh "noctalia msg panel-toggle launcher"; }
+    Mod+ALT+L			        hotkey-overlay-title="Lock Screen: Noctalia" { spawn-sh "noctalia msg session lock"; }
+    Mod+Shift+Q			        hotkey-overlay-title="Session Menu: Noctalia" { spawn-sh "noctalia msg panel-toggle session"; }
+
+    Mod+R { switch-preset-column-width; }
 
     // Please choose your own file manager.
     // Mod+E                               hotkey-overlay-title="File Manager: Nautilus" { spawn "nautilus"; }
-    Mod+E                               hotkey-overlay-title="File Manager: Yazi" { spawn "alacritty" "-e" "/usr/bin/yazi"; }
-    Mod+T                               hotkey-overlay-title="Terminal: Zellij" { spawn "alacritty" "-e" "/usr/bin/zellij"; }
+    Mod+E                               hotkey-overlay-title="File Manager: Yazi" { spawn "kitty" "-e" "/usr/bin/yazi"; }
+    Mod+T                               hotkey-overlay-title="Terminal: Zellij" { spawn "kitty" "-e" "/usr/bin/zellij"; }
 
     // ─── Media Controls ───
-    XF86AudioRaiseVolume                allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
-    XF86AudioLowerVolume                allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
-    XF86AudioMute                       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
-    XF86AudioMicMute                    allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteInput"; }
-    XF86AudioNext                       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media next"; }
-    XF86AudioPrev                       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media previous"; }
-    XF86AudioPlay                       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media playPause"; }
-    XF86AudioPause                      allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media playPause"; }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "noctalia msg volume-up"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "noctalia msg volume-down"; }
+    XF86AudioMute allow-when-locked=true { spawn-sh "noctalia msg volume-mute"; }
+
+    XF86AudioPlay allow-when-locked=true { spawn-sh "noctalia msg media toggle"; }
+    XF86AudioPause allow-when-locked=true { spawn-sh "noctalia msg media toggle"; }
+    XF86AudioNext allow-when-locked=true { spawn-sh "noctalia msg media next"; }
+    XF86AudioPrev allow-when-locked=true { spawn-sh "noctalia msg media previous"; }
+    XF86AudioMicMute allow-when-locked=true { spawn-sh "noctalia msg media muteInput"; }
 
     // ─── Brightness Controls ───
-    XF86MonBrightnessUp                 allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness increase"; }
-    XF86MonBrightnessDown               allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness decrease"; }
+    XF86MonBrightnessUp allow-when-locked=true { spawn-sh "noctalia msg brightness-up"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn-sh "noctalia msg brightness-down"; }
 
     // ─── Window Movement and Focus ───
     Mod+Q                               { close-window; }
@@ -111,7 +119,8 @@ binds {
     Mod+TAB                             { focus-workspace-previous; }
 
     // ─── Layout Controls ───
-    Mod+F                               { expand-column-to-available-width; }
+    // Mod+F                               { expand-column-to-available-width; }
+    Mod+F                               { maximize-column; }
     Mod+C                               { center-column; }
     Mod+CTRL+C                          { center-visible-columns; }
     Mod+Minus                           { set-column-width "-10%"; }
