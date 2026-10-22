@@ -11705,7 +11705,6 @@ if [[ "$_KERNEL_NAME" = "MINGW" ]] || [[ "$_KERNEL_NAME" = "CYGWI" ]]; then
 
 	# If using Git Bash or Cygwin use faster and less intensive functions
 	export PS1='\[\033[0;35m\]\u \
-\[\033[0;34m\]\D{%b %d} \
 \[\033[0;36m\]\A \
 \[\033[0;33m\]\w\
 \[\033[0;31m\]`_prompt_git_fast`\
@@ -11730,8 +11729,6 @@ else # Standard default prompt
 			# Remote SSH with short path (1 line)
 			export PS1="\[\033[0;35m\]\u\
 @\[\033[1;35m\]\h \
-\[\033[0;34m\]\D{%b %-d} \
-\[\033[0;36m\]\D{%-H:%M} \
 \[\033[0;33m\]\w\
 \[\033[0;31m\]\$(_prompt_git_branch) \
 \[${_COLOR_USER}\]>\[\033[0m\] "
@@ -11739,8 +11736,6 @@ else # Standard default prompt
 			# Remote SSH with full path (2 lines)
 			export PS1="\[\033[0;35m\]\u\
 @\[\033[1;35m\]\h \
-\[\033[0;34m\]\D{%b %-d} \
-\[\033[0;36m\]\D{%-H:%M:%S} \
 \[\033[0;33m\]\$(_prompt_pwd_full)\
 \[\033[0;31m\]\$(_prompt_git_branch)\
 \[\033[0m\]\n\[${_COLOR_USER}\]>\[\033[0m\] "
@@ -11751,16 +11746,12 @@ else # Standard default prompt
 		if [[ $_PROMPT_BUILTIN_FULL_PATH = false ]]; then
 			# Local with short path (1 line)
 			export PS1="\[\033[0;35m\]\u \
-\[\033[0;34m\]\D{%b %-d} \
-\[\033[0;36m\]\D{%-H:%M} \
 \[\033[0;33m\]\w\
 \[\033[0;31m\]\$(_prompt_git_branch) \
 \[${_COLOR_USER}\]>\[\033[0m\] "
 		else
 			# Local with full path (2 lines)
 			export PS1="\[\033[0;35m\]\u \
-\[\033[0;34m\]\D{%b %-d} \
-\[\033[0;36m\]\D{%-H:%M:%S} \
 \[\033[0;33m\]\$(_prompt_pwd_full)\
 \[\033[0;31m\]\$(_prompt_git_branch)\
 \[\033[0m\]\n\[${_COLOR_USER}\]>\[\033[0m\] "
@@ -12115,3 +12106,12 @@ if [[ $TILIX_ID ]] || [[ $VTE_VERSION ]]; then
 		source /etc/profile.d/vte.sh
 	fi
 fi
+
+## Useful aliases
+# Replace ls with eza
+alias ls='eza -al --color=always --group-directories-first --icons=always' # preferred listing
+alias la='eza -a --color=always --group-directories-first --icons=always'  # all files and dirs
+alias ll='eza -l --color=always --group-directories-first --icons=always'  # long format
+alias lt='eza -aT --color=always --group-directories-first --icons=always' # tree listing
+alias l.="eza -a | grep -e '^\.'"                                     # show only dotfiles
+

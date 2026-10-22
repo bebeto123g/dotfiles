@@ -1,0 +1,24 @@
+# Уровень непрозрачности фона (от 0.0 — полностью прозрачный, до 1.0 — полностью сплошной)
+background-opacity = 0.9
+
+# Радиус размытия заднего плана (работает на macOS и поддерживаемых Linux-окружениях)
+background-blur-radius = 20
+
+# Отступы по горизонтали (слева и справа)
+window-padding-x = 8
+
+# Отступы по вертикали (сверху и снизу)
+window-padding-y = 8
+
+# Размер шрифта
+font-size = 15
+
+# Семейство шрифтов
+font-family = "Hasklug Nerd Fonts"
+
+# Отключаем проверку при закрытии
+confirm-close-surface = false
+
+# Bash по умолчанию
+command = /bin/bash --login
+
