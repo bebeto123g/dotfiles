@@ -9,7 +9,7 @@ shell = { program = "/bin/zsh", args = ["-l"] }
 dynamic_padding = true
 decorations = "full"
 title = "Alacritty@CachyOS"
-opacity = 0.99
+opacity = 0.9
 decorations_theme_variant = "Dark"
 
 [window.dimensions]
