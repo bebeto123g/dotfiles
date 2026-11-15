@@ -7,3 +7,8 @@ include "./cfg/layout.kdl"
 include "./cfg/rules.kdl"
 include "./cfg/misc.kdl"
 
+environment {
+    EDITOR "nvim"
+    VISUAL "nvim"
+}
+

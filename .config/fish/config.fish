@@ -152,5 +152,12 @@ alias jctl="journalctl -p 3 -xb"
 # Recent installed packages
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 
-export EDITOR=vim
+export EDITOR=nvim
+export VISUAL=nvim
+
+set -gx EDITOR nvim
+set -gx VISUAL nvim
+
+set -Ux EDITOR nvim
+set -Ux VISUAL nvim
 

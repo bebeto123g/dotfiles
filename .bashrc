@@ -12115,3 +12115,6 @@ alias ll='eza -l --color=always --group-directories-first --icons=always'  # lon
 alias lt='eza -aT --color=always --group-directories-first --icons=always' # tree listing
 alias l.="eza -a | grep -e '^\.'"                                     # show only dotfiles
 
+export EDITOR=nvim
+export VISUAL=nvim
+
