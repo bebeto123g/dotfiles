@@ -10,6 +10,8 @@ gestures {
 input {
     keyboard {
         xkb {
+		layout "us,ru"
+		options "grp:caps_toggle"
             //If you want to overwrite your keyboard layout,
             // uncomment the line below and change the layout accordingly.
             //layout "us" // Use the American keyboard layout
