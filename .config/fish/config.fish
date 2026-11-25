@@ -116,6 +116,22 @@ alias la='eza -a --color=always --group-directories-first --icons=always'  # all
 alias ll='eza -l --color=always --group-directories-first --icons=always'  # long format
 alias lt='eza -aT --color=always --group-directories-first --icons=always' # tree listing
 alias l.="eza -a | grep -e '^\.'"                                     # show only dotfiles
+alias intdigital_vpn="sudo openconnect --protocol=anyconnect vpn.intdigital.ru"
+
+function intd_vpn
+    set -l USER (secret-tool lookup service intdigital-vpn key username)
+    set -l PASS (secret-tool lookup service intdigital-vpn key password)
+    set -l SERVER (secret-tool lookup service intdigital-vpn key server)
+
+    if test -z "$PASS" -o -z "$USER" -o -z "$SERVER"
+        echo "Ошибка: данные VPN не найдены в связке ключей."
+        return 1
+    end
+
+    read -P "Введите OTP код: " OTP
+
+    printf "%s\n%s\n" "$PASS" "$OTP" | sudo openconnect --protocol=anyconnect -u "$USER" --passwd-on-stdin "$SERVER"
+end
 
 # Common use
 alias grubup="sudo grub-mkconfig -o /boot/grub/grub.cfg"

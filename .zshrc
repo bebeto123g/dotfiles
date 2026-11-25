@@ -18,6 +18,22 @@ alias la='eza -a --color=always --group-directories-first --icons=always'  # all
 alias ll='eza -l --color=always --group-directories-first --icons=always'  # long format
 alias lt='eza -aT --color=always --group-directories-first --icons=always' # tree listing
 alias l.="eza -a | grep -e '^\.'"                                     # show only dotfiles
+alias intdigital_vpn="sudo openconnect --protocol=anyconnect vpn.intdigital.ru"
+
+intd_vpn() {
+    local USER=$(secret-tool lookup service intdigital-vpn key username)
+    local PASS=$(secret-tool lookup service intdigital-vpn key password)
+    local SERVER=$(secret-tool lookup service intdigital-vpn key server)
+
+    if [[ -z "$PASS" || -z "$USER" || -z "$SERVER" ]]; then
+        echo "Ошибка: данные VPN не найдены в связке ключей."
+        return 1
+    fi
+
+    read -rp "Введите OTP код: " OTP
+
+    printf "%s\n%s\n" "$PASS" "$OTP" | sudo openconnect --protocol=anyconnect -u "$USER" --passwd-on-stdin "$SERVER"
+}
 
 export EDITOR=nvim
 export VISUAL=nvim
