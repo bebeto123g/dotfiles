@@ -1,5 +1,5 @@
 window-rule {
-    geometry-corner-radius 10 // Set every window radius to 20
+    geometry-corner-radius 6 // Set every window radius to 20
     clip-to-geometry true
 }
 
@@ -18,14 +18,17 @@ window-rule {
 
 window-rule {
     match app-id="firefox"
+    match app-id="waterfox"
     match app-id="zen"
     match app-id="obsidian"
     match app-id="code-oss"
+    match app-id="code"
+    match app-id="codium"
     match app-id="mpv"
     match app-id="helium"
     match app-id="kitty"
     match app-id="VirtualBox Machine"
-    // match app-id="^kitty$" title="^Yazi: bebeto$"
+
     open-maximized true
 }
 
