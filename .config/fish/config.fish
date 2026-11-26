@@ -116,6 +116,7 @@ alias la='eza -a --color=always --group-directories-first --icons=always'  # all
 alias ll='eza -l --color=always --group-directories-first --icons=always'  # long format
 alias lt='eza -aT --color=always --group-directories-first --icons=always' # tree listing
 alias l.="eza -a | grep -e '^\.'"                                     # show only dotfiles
+alias lg="lazygit"                                     
 alias intdigital_vpn="sudo openconnect --protocol=anyconnect vpn.intdigital.ru"
 
 function intd_vpn
